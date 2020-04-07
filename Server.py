@@ -10,7 +10,6 @@ cp=[]
 j=0
 c={}
 addr={}
-sl=0
 
 #Binding and connection:
 s.bind(('', port))         
@@ -65,7 +64,6 @@ while data:
        time.sleep(x)               
        for i in range(3):
            addr[i]-=x
-           sl=sl+x
        j=j-1
 
 #To wait for the last deliveries
@@ -74,6 +72,5 @@ time.sleep(su)
 
 for i in range(3):
     cp[i].close()
-print(sl)
 f.close()
   
